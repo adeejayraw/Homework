@@ -1,3 +1,7 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
 html, body{
     height: 100%;
     width: 100%;
@@ -22,17 +26,42 @@ h1{
 }
 .center{
     position: absolute;
-    top: 50%;
+    top: 40%;
     bottom: 50%;
     color: aliceblue;
     text-align: center;
     transform: translate(-50%, -50%);
 }
-p{
+.descr{
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    padding: auto;
-    margin: 10px 0;
-    
+    text-indent: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+    padding-top: 50px;
+}
+.icon1, .icon2, .icon3{
+    color:  grey;
+    width: 30px;
+    height: 30px;
+}
+.icon1{
+    position: absolute;
+    top: 870px;
+    left: 530px;
+    margin: auto;
+}
+.icon2{
+    position: absolute;
+    top: 870px;
+    left: 920px;
+    margin: auto;
+}
+.icon3{
+    position: absolute;
+    top: 870px;
+    right: 590px;
+    margin: auto;
 }
