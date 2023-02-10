@@ -1,0 +1,350 @@
+/*You can add style to an element by specifying it in the style element and setting a property for it like this:*/
+element {
+    color: value;
+   }
+/*You can add the same group of styles to many elements by creating a list of selectors. Each selector is separated with commas like this:*/
+selector1, selector2 {
+    color: value;
+}
+a { /*Changes the property of a link before and after it was visited, and when you hover over it, and active*/
+    color: black;
+}
+a:visited {
+    color: grey;
+}
+a:hover {
+    color:brown;
+}
+a:active {
+    color:white;
+}
+/*The linear-gradient function is very flexible -- here is the basic syntax you'll use in this tutorial,
+gradientDirection is the direction of the line used for the transition. 
+color1 and color2 are color arguments, which are the colors that will be used in the transition itself. 
+These can be any type of color, including color keywords, hex, rgb, or hsl.*/
+.red {
+    background: linear-gradient(gradientDirection);
+}
+/*Color-stops allow you to fine-tune where colors are placed along the gradient line. 
+They are a length unit like px or percentages that follow a color in the linear-gradient function.
+For example, in this red-black gradient, the transition from red to black takes place at the 90% point along the gradient line, 
+so red takes up most of the available space*/
+.red {
+    background: linear-gradient(90deg, red 90%, black);
+}
+/*Opacity describes how opaque, or non-transparent, something is. For example, a solid wall is opaque, and no light can pass through. 
+But a drinking glass is much more transparent, and you can see through the glass to the other side.
+With the CSS opacity property, you can control how opaque or transparent an element is. 
+With the value 0, or 0%, the element will be completely transparent, and at 1.0, or 100%, the element will be completely opaque like it is by default.*/
+.sleeve {
+    width: 110px;
+    height: 25px;
+    background-color: white;
+    opacity: 0.5;
+  }
+/*The box-shadow property lets you apply one or more shadows around an element. Here is basic syntax:
+box-shadow: offsetX offsetY color*/
+.red {
+    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+    box-shadow: 5px 5px red
+  }
+/*Notice that the edges of the shadow are sharp. This is because there is an optional blurRadius value for the box-shadow property:
+box-shadow: offsetX offsetY blurRadius color;
+If a blurRadius value isn't included, it defaults to 0 and produces sharp edges. The higher the value of blurRadius, the greater the blurring effect is.*/
+.green {
+    background: linear-gradient(#55680D, #71F53E, #116C31);
+    box-shadow: 5px 5px 5px green;
+  }
+/*But what if you wanted to expand the shadow out further? You can do that with the optional spreadRadius value:
+box-shadow: offsetX offsetY blurRadius spreadRadius color;
+Like blurRadius, spreadRadius defaults to 0 if it isn't included.*/
+.blue {
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0px 0px 0px 5px blue;
+}
+/*The vh unit stands for viewport height, and is relative to 1% of the height of the viewport.*/
+body{
+    width: 100%;
+    height: 100vh;
+  }
+  /*The rem unit stands for root em, and is relative to the font size of the html element.*/
+label{
+    display: block;
+    margin: 0.5rem 0
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.gallery img{
+ width: 100%;
+ max-width: 350px;
+ height: 300px;
+}
+body{
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: #f5f6f7;
+}
+header{
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+}
+/*Flexbox has a main and cross axis. The main axis is defined by the flex-direction property, which has four possible values:
+
+row (default): horizontal axis with flex items from left to right
+row-reverse: horizontal axis with flex items from right to left
+column: vertical axis with flex items from top to bottom
+column-reverse: vertical axis with flex items from bottom to top
+Note: The axes and directions will be different depending on the text direction. The values shown are for a left-to-right text direction.
+
+Try the different values to see how they affect the layout.
+
+When you are done, set an explicit flex-direction of row on the .gallery element.*/
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  /*The flex-wrap property determines how your flex items behave when the flex container is too small. Setting it to wrap will allow the items to wrap to the next row or column. nowrap (default) will prevent your items from wrapping and shrink them if needed.*/
+    justify-content: center; /*The justify-content property determines how the items inside a flex container are positioned along the main axis, affecting their position and the space around them.*/
+    align-items: center; /*The align-items property positions the flex content along the cross axis. In this case, with your flex-direction set to row, your cross axis would be vertical.*/
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 16px; /*The gap CSS shorthand property sets the gaps, also knowns as gutters, between rows and columns. The gap property and its row-gap and column-gap sub-properties provide this functionality for flex, grid, and multi-column layout. You apply the property to the container element.*/
+}
+.gallery::after{ /*The ::after pseudo-element creates an element that is the last child of the selected element. You can use it to add an empty element after the last image. If you give it the same width as the images it will push the last image to the left when the gallery is in a two-column layout. Right now, it is in the center because you set justify-content: center on the flex container.*/
+    content: "";
+    width: 350px;
+}
+body{
+    font-family: "Open Sans", sans-serif;
+}
+html{
+    font-size: 16px;
+}
+.label{
+    border: 2px solid black;
+    width: 270px;
+    margin: 20px auto;
+    padding: 0 7px;
+}
+*{
+    box-sizing: border-box;
+}
+header h1 {
+    font-weight: 800;
+    text-align: center;
+    margin: -4px 0;
+    letter-spacing: 0.15px;
+  }
+.divider{
+    border-bottom: 1px solid #888989;
+    margin: 2px 0;
+}
+.bold{
+    font-weight: 800;
+}
+p {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.large{
+    height: 10px;
+}
+.large, .medium{
+    background-color: black;
+}
+
+/*CSS building cheattable*/
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  body {
+    background: #f5f6f7;
+    color: #1b1b32;
+    font-family: Helvetica;
+    margin: 0;
+  }
+  
+  header {
+    width: 100%;
+    height: 50px;
+    background-color: #1b1b32;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+  }
+  
+  #logo {
+    width: max(100px, 18vw);
+    background-color: #0a0a23;
+    aspect-ratio: 35 / 4;
+    padding: 0.4rem;
+  }
+  
+  h1 {
+    color: #f1be32;
+    font-size: min(5vw, 1.2em);
+    text-align: center;
+  }
+  
+  nav {
+    width: 50%;
+    max-width: 300px;
+    height: 50px;
+  }
+  
+  nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+  }
+  
+  nav > ul > li {
+    color: #dfdfe2;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
+  }
+  
+  nav > ul > li:hover {
+    background-color: #dfdfe2;
+    color: #1b1b32;
+    cursor: pointer;
+  }
+  
+  li > a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  main {
+    padding-top: 50px;
+  }
+  
+  section {
+    width: 80%;
+    margin: 0 auto 10px auto;
+    max-width: 600px;
+  }
+  
+  h1,
+  h2 {
+    font-family: Verdana, Tahoma;
+  }
+  
+  h2 {
+    border-bottom: 4px solid #dfdfe2;
+    margin-top: 0px;
+    padding-top: 60px;
+  }
+  
+  .info {
+    padding: 10px 0 0 5px;
+  }
+  
+  .formrow {
+    margin-top: 30px;
+    padding: 0px 15px;
+  }
+  
+  input {
+    font-size: 16px;
+  }
+  
+  .info label, .info input {
+    display: inline-block;
+  }
+  
+  .info input {
+    width: 50%;
+    text-align: left;
+  }
+  
+  .info label {
+    width: 10%;
+    min-width: 55px;
+    text-align: right;
+  }
+  
+  .question-block {
+    text-align: left;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 5px;
+  }
+  
+  p {
+    margin-top: 5px;
+    padding-left: 15px;
+    font-size: 20px;
+  }
+  
+  p::before {
+    content: "Question #";
+  }
+  
+  .question {
+    border: none;
+    padding-bottom: 0;
+  }
+  
+  .answers-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  button {
+    display: block;
+    margin: 40px auto;
+    width: 40%;
+    padding: 15px;
+    font-size: 23px;
+    background: #d0d0d5;
+    border: 3px solid #3b3b4f;
+  }
+  
+  footer {
+    background-color: #2a2a40;
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer,
+  footer a {
+    color: #dfdfe2;
+  }
+  
+  address {
+    text-align: center;
+    padding: 0.3em;
+  }
+  
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  

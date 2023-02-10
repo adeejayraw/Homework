@@ -1,0 +1,214 @@
+ <!--ALWAYS BEGIN WITH THIS-->
+<!DOCTYPE html>
+<!--CONTINUE WITH THIS-->
+<meta charset="UTF-8"> 
+<!--For the styling of the page to look similar on mobile as it does on a desktop or laptop-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+<!--Adds a contained figue around an element which can be cptiond or edied later, outside the wider element-->
+<meta name="description" content="quiz">
+<figure></figure> 
+<!--A figure caption element is used to add a caption to describe the image contained within the figure element.-->
+<figcaption></figcaption>
+<!--Creates an unedited list-->
+<ul></ul> 
+<!--Crates an item inside the list, needs to be nested inside the list-->
+<li></li> 
+<!--Main element on the page, can be used separatelz from articles and headers and so on-->
+<main></main> 
+<!--Emphasizes the element nested between it. Is verz similair to italic in nature-->
+<em></em> 
+<!--The code for an ordered list is similar to an unordered list, but list items in an ordered list are numbered when displayed.-->
+<ol></ol> 
+ <!--The strong element is used to indicate that some text is of strong importance or urgent. Is similair to bold-->
+<strong></strong>
+<!--Will add a web form to collect information from users.-->
+<form></form> 
+<!--The action attribute indicates where form data should be sent. For example, <form action="/submit-url"></form> tells the browser that the form data should be sent to the path /submit-url.-->
+<form action=""></form> 
+<!--The input element allows you several ways to collect data from a web form. Like img elements, input elements are self-closing and do not need closing tags.-->
+<input> 
+<!--There are many kinds of inputs you can create using the type attribute. You can easily create a password field, reset button, or a control to let users select a file from their computer.-->
+<input type="text"> 
+<!--n order for a form's data to be accessed by the location specified in the action attribute, you must give the text field a name attribute and assign it a value to represent the data being submitted.-->
+<input type="text" name="email"> 
+<!--Placeholder text is used to give people a hint about what kind of information to enter into an input.-->
+<input type="text" name="catphotourl" placeholder="cat photo URL"> 
+ <!--To prevent a user from submitting your form when required information is missing, you need to add the required attribute to an input element. -->
+<input type="text" name="catphotourl" placeholder="cat photo URL" required>
+<button></button> <!--Use the button element to create a clickable button. The default behavior of clicking a form button without any attributes submits the form to the location specified in the form's action attribute.-->
+<!--Even though button was added below the text input, they appear next to each other on the page. That's because both input and button elements are inline elements, which don't appear on new lines.-->
+<input type="radio"> <!--You can use radio buttons for questions where you want only one answer out of multiple options.-->
+<label></label> <!--label elements are used to help associate the text for an input element with the input element itself (especially for assistive technologies like screen readers).-->
+<input type="radio" id="indoor"> <!--The id attribute is used to identify specific HTML elements. Each id attribute's value must be unique from all other id values for the entire page.-->
+<input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> <!--If you select the Indoor radio button and submit the form, the form data for the button is based on its name and value attributes. Since your radio buttons do not have a value attribute, the form data will include indoor-outdoor=on, which is not useful when you have multiple buttons.-->
+<fieldset></fieldset> <!--The fieldset element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements, meaning that they appear on a new line.-->
+<legend></legend> <!--The legend element acts as a caption for the content in the fieldset element. It gives users context about what they should enter into that part of the form.-->
+<input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> <!--In order to make a checkbox checked or radio button selected by default, you need to add the checked attribute to it. There's no need to set a value to the checked attribute. Instead, just add the word checked to the input element, making sure there is space between it and other attributes.-->
+<link rel="stylesheet" href="styles.css"> <!--Nest a self-closing link element in the head element. Give it a rel attribute value stylesheet and an href attribute value of styles.css.-->
+<form action='https://register-demo.freecodecamp.org' method="post"></form> <!--The method attribute specifies how to send form-data to the URL specified in the action attribute. The form-data can be sent via a GET request as URL parameters (with method="get") or via a POST request as data in the request body (with method="post").-->
+<!--Following accessibility best practices, link the input elements and the label elements together using the for attribute.-->>
+<fieldset>
+    <label for="first-name">Enter Your First Name: <input id=first-name /></label>
+    <label for="last-name">Enter Your Last Name: <input id=last-name /></label>
+    <label for="email">Enter Your Email: <input id=email /></label>
+    <label for="new-password">Create a New Password: <input id=new-password /></label>
+</fieldset>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+    <body></body>
+<title>Photo Gallery</title>
+<link rel="stylesheet" href="styles.css">
+<header class="header">
+    <h1>
+        css flexbox photo gallery
+    </h1>
+</header>
+<div class="gallery">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" alt="Sleepy kitty">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg" alt="Upside donw kitty">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg" alt="Thoughtfull kitty">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg" alt="Blanket kitty">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg" alt="Tiny kitty">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg" alt="Double kitty">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg" alt="Curious kitty">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg" alt="Beautifull kitty">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg" alt="Black and white kitty">
+</div>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Nutrition Label</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1> Nutrition Facts</h1>
+    <p>8 servings per container</p>
+    <p>Serving size 2/3 cup (55g)</p>
+</body>
+</html>
+<div class="divider large"></div>
+<section></section>
+
+<!--Semantic HTML element design-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+    <title>Accessibility Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
+      <h1>HTML/CSS Quiz</h1>
+      <nav>
+        <ul>
+          <li><a href="#student-info">INFO</a></li>
+          <li><a href="#html-questions">HTML</a></li>
+          <li><a href="#css-questions">CSS</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Student Info</h2>
+          <div class="info">
+            <label for="student-name">Name:</label>
+            <input type="text" name="student-name" id="student-name" />
+          </div>
+          <div class="info">
+            <label for="student-email">Email:</label>
+            <input type="email" name="student-email" id="student-email" />
+          </div>
+          <div class="info">
+            <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+            <input type="date" name="birth-date" id="birth-date" />
+          </div>
+        </section>
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">HTML</h2>
+          <div class="question-block">
+            <p>1</p>
+            <fieldset class="question" name="html-question-one">
+              <legend>
+                The legend element represents a caption for the content of its
+                parent fieldset element
+              </legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q1-a1">
+                    <input type="radio" id="q1-a1" name="q1" value="true" />
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q1-a2">
+                    <input type="radio" id="q1-a2" name="q1" value="false" />
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="question-block">
+            <p>2</p>
+            <fieldset class="question" name="html-question-two">
+              <legend>
+                A label element nesting an input element is required to have a
+                for attribute with the same value as the input's id
+              </legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q2-a1">
+                    <input type="radio" id="q2-a1" name="q2" value="true" />
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q2-a2">
+                    <input type="radio" id="q2-a2" name="q2" value="false" />
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">CSS</h2>
+          <div class="formrow">
+            <div class="question-block">
+              <label for="customer">Are you a frontend developer?</label>
+            </div>
+            <div class="answer">
+              <select name="customer" id="customer" required>
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="question-block">
+              <label for="css-questions">Do you have any questions:</label>
+            </div>
+            <div class="answer">
+              <textarea id="css-questions" name="css-questions" rows="5" cols="24" placeholder="Who is flexbox..."></textarea>
+            </div>
+          </div>
+        </section>
+        <button type="submit">Send</button>
+      </form>
+    </main>
+
+  </body>
+</html>
